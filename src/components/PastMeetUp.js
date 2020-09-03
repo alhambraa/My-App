@@ -1,19 +1,25 @@
 import React from 'react'
-import {Col,Card,Button} from 'react-bootstrap'
+import {Row,Col,Card,Button} from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
-const PastMeetUp = ({header,title,content}) => {
+const PastMeetUp = ({data}) => {
     return (
-        <Col>
-            <Card>
-                <Card.Header>{header}</Card.Header>
-                <Card.Body>
-                    <Card.Title>{title}</Card.Title>
-                    <Card.Text>{content}</Card.Text>
-                    <Button variant="success" size="sm">View</Button>{' '}
-                </Card.Body>
-            </Card>
-        </Col>
+        <Row className="ml-2 text-left">
+            {
+                data.map((list) => (    
+            <Col className="col-md-4 grid-wrapper">
+                <Card key={list.id}>
+                    <Card.Header>{list.header}</Card.Header>
+                    <Card.Body>
+                        <Card.Title>{list.title}</Card.Title>
+                        <Card.Text>{list.content}</Card.Text>
+                        <Button variant="success" size="sm">View</Button>{' '}
+                    </Card.Body>
+                </Card>
+            </Col>
+            ))
+            }   
+        </Row>
     )
 };
 
@@ -74,3 +80,18 @@ export default PastMeetUp;
         //         </Col>
         //     </Row>
         // </Container>
+
+        // const PastMeetUp = ({header,title,content}) => {
+        //     return (
+        //         <Col>
+        //             <Card>
+        //                 <Card.Header>{header}</Card.Header>
+        //                 <Card.Body>
+        //                     <Card.Title>{title}</Card.Title>
+        //                     <Card.Text>{content}</Card.Text>
+        //                     <Button variant="success" size="sm">View</Button>{' '}
+        //                 </Card.Body>
+        //             </Card>
+        //         </Col>
+        //     )
+        // };

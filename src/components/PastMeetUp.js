@@ -23,7 +23,7 @@ const PastMeetUp = ({data}) => {
     )
 };
 
-PastMeetUp.prototype = {
+PastMeetUp.propTypes  = {
     header : PropTypes.string.isRequired,
     title : PropTypes.string.isRequired,
     content : PropTypes.string.isRequired,

@@ -49,7 +49,7 @@ function App() {
             </p>
             <h4 className="text-left">Members</h4>
             <h6 className="text-right">See all</h6>
-            <Members/>
+            <Members name="Adhy Wiranata" count="1,041" />
             <h4 className="text-left">Past Meetups</h4>
             <h6 className="text-right">See all</h6>
             <PastMeetUp data={PastMeetUpData}/>

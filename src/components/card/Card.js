@@ -6,10 +6,10 @@ import Button from 'react-bootstrap/Button'
 import PropTypes from 'prop-types'
 // import "./card.css";
 
-const Card = ({avatar,event,location,member,organizer,button}) => {
+const Card = ({event,location,member,organizer,button}) => {
     return (
         <div className="card flex-row flex-wrap text-left bg-secondary mb-4">
-             <div ><Avatar src={Images} alt={Images}/></div>
+            <div ><Avatar src={Images} alt={Images}/></div>
             <div className="card-block px-2">
                 <h5 className="card-title mt-2"><b>{event}</b></h5>
                 <p className="card-text">{location}</p>
@@ -21,7 +21,7 @@ const Card = ({avatar,event,location,member,organizer,button}) => {
     )
 };
 
-Card.prototype = {
+Card.propTypes  = {
     avatar : PropTypes.string.isRequired,
     event : PropTypes.string.isRequired,
     member : PropTypes.string.isRequired,

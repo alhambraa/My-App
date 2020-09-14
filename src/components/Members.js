@@ -1,13 +1,14 @@
 import React from 'react'
 import Images from './img/index2.jpg'
 import Avatar2 from './avatar/Avatar2'
+import {MemberBG,MemberCntn} from "./style/MemberStyle";
 import PropTypes from 'prop-types'
 
 const Members = ({name,count}) => {
     return (
-        <div className="card flex-row flex-wrap text-left bg-secondary mb-4 ml-4">
+        <MemberBG>
             <div ><Avatar2 src={Images} alt={Images}/></div>
-            <div className="card-block px-4">
+            <MemberCntn>
                 <h5 className="card-title mt-2"><b>Organizer</b></h5>
                 <table>
                     <tr>
@@ -16,8 +17,8 @@ const Members = ({name,count}) => {
                         <td>{count}</td>
                     </tr>
                 </table>
-            </div>
-        </div>
+            </MemberCntn>
+        </MemberBG>
     )
 };
 

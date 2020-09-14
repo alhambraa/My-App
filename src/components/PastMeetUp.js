@@ -1,23 +1,26 @@
 import React from 'react'
-import {Row,Col,Card,Button} from 'react-bootstrap'
+import {Row} from 'react-bootstrap'
 import PropTypes from 'prop-types'
+import Button from './style/Button'
+import {PastMeetBG,PassMeetCntn} from "./style/PastMeetStyle";
 
 const PastMeetUp = ({data}) => {
     return (
         <Row className="ml-2 text-left">
             {
                 data.map((list) => (    
-            <Col className="col-md-4 grid-wrapper">
-                <Card key={list.id}>
-                    <Card.Header>{list.header}</Card.Header>
-                    <Card.Body>
-                        <Card.Title>{list.title}</Card.Title>
-                        <Card.Text>{list.content}</Card.Text>
-                        <Button variant="success" size="sm">View</Button>{' '}
-                    </Card.Body>
-                </Card>
-            </Col>
-            ))
+                    <PastMeetBG>
+                        <PassMeetCntn>
+                            <p key={list.id}></p>
+                            <p>{list.header}</p>
+                            <hr></hr>
+                            <br></br>
+                            <p>{list.title}</p>
+                            <p>{list.content}</p>
+                            <Button primary="primary" text="View"></Button>
+                        </PassMeetCntn>
+                    </PastMeetBG>
+                ))
             }   
         </Row>
     )
@@ -37,61 +40,3 @@ PastMeetUp.defaultProps = {
 
 export default PastMeetUp;
 
- // <Container className="text-left">
-        //     <Row className="ml-0">
-        //         <Col>
-        //             <Card>
-        //                 <Card.Header>Header</Card.Header>
-        //                 <Card.Body>
-        //                 <Card.Title>Primary Card Title</Card.Title>
-        //                 <Card.Text>
-        //                     Some quick example text to build on the card title and make up the bulk
-        //                     of the card's content.
-        //                 </Card.Text>
-        //                 <Button variant="success" size="sm">View</Button>{' '}
-        //                 </Card.Body>
-        //             </Card>
-        //         </Col>
-        //         <Col>
-        //             <Card>
-        //                 <Card.Header>Header</Card.Header>
-        //                 <Card.Body>
-        //                 <Card.Title>Primary Card Title</Card.Title>
-        //                 <Card.Text>
-        //                     Some quick example text to build on the card title and make up the bulk
-        //                     of the card's content.
-        //                 </Card.Text>
-        //                 <Button variant="success" size="sm">View</Button>{' '}
-        //                 </Card.Body>
-        //             </Card>
-        //         </Col>
-        //         <Col>
-        //             <Card>
-        //                 <Card.Header>Header</Card.Header>
-        //                 <Card.Body>
-        //                 <Card.Title>Primary Card Title</Card.Title>
-        //                 <Card.Text>
-        //                     Some quick example text to build on the card title and make up the bulk
-        //                     of the card's content.
-        //                 </Card.Text>
-        //                 <Button variant="success" size="sm">View</Button>{' '}
-        //                 </Card.Body>
-        //             </Card>
-        //         </Col>
-        //     </Row>
-        // </Container>
-
-        // const PastMeetUp = ({header,title,content}) => {
-        //     return (
-        //         <Col>
-        //             <Card>
-        //                 <Card.Header>{header}</Card.Header>
-        //                 <Card.Body>
-        //                     <Card.Title>{title}</Card.Title>
-        //                     <Card.Text>{content}</Card.Text>
-        //                     <Button variant="success" size="sm">View</Button>{' '}
-        //                 </Card.Body>
-        //             </Card>
-        //         </Col>
-        //     )
-        // };

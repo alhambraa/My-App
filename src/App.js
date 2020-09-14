@@ -47,6 +47,7 @@ function App() {
               Come and meet other developers interested in the JavaScript and its library in the Greater Jakarta area<br />
               Twitter: @JakartaJS and we user the hashtag #jakartajs
             </p>
+            <br></br>
             <h4 className="text-left">Members</h4>
             <h6 className="text-right">See all</h6>
             <Members name="Adhy Wiranata" count="1,041" />

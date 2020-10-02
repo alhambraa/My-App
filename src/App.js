@@ -34,10 +34,10 @@ function App() {
        <br></br>
         <div className="container">
             <Card
-              event="Hactiv8 Meeting"
+              event="Hacktiv8 Meeting"
               location="Jakarta, Indonesia"
-              member="Members : 1,078"
-              organizer="Organizers : Alhambra"
+              member="1,078"
+              organizer="Alhambra"
               button="Join Us"
             />
             <h4 className="text-left">Next Meetup</h4>
